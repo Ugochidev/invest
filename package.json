@@ -1,0 +1,10 @@
+{
+  "name": "invest",
+  "version": "1.0.0",
+  "description": "A fintech app",
+  "main": "index.js",
+  "repository": "https://github.com/Ugochidev/invest",
+  "author": "Ugochidev",
+  "license": "MIT",
+  "private": false
+}
