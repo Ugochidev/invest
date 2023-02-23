@@ -1,0 +1,35 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#0ab2fa",
+    "activityBar.activeBorder": "#04bbb7",
+    "activityBar.background": "#0aaefa",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#04bbb7",
+    "activityBarBadge.foreground": "#15202b",
+    "statusBar.background": "#0abefa",
+    "statusBar.foreground": "#144e88",
+    "statusBarItem.hoverBackground": "#0aaefa",
+    "titleBar.activeBackground": "#0aaafa",
+    "titleBar.activeForeground": "#151b2b",
+    "titleBar.inactiveBackground": "#0ac2fa",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "files.exclude": {
+    "**/node_modules/": true,
+    "**/coverage/": true,
+    "**/.env": false
+  },
+
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.format": true
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
