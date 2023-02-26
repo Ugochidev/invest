@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", async (request: Request, response: Response) => {
   return response.json({
     status: true,
-    message: "This is Quola application entry point",
+    message: "This is invest application entry point",
   });
 });
 
