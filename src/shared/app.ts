@@ -2,6 +2,7 @@ import "express-async-errors";
 import express from "express";
 import { Request, Response } from "express";
 import rateLimit from "express-rate-limit";
+import "reflect-metadata";
 // import routes from "./src/shared/routes";
 import cors from "cors";
 

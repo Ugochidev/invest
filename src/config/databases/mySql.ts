@@ -1,23 +1,16 @@
-import mysql from "mysql2";
-import dotenv from "dotenv";
-dotenv.config();
-import environment from "../environment";
+import { DataSource } from 'typeorm';
 
-// creating connection
-const connection : any = mysql.createConnection({
-  host: environment.hostSql,
-  port: environment.portSql,
-  user: environment.userSql,
-  password: environment.passwordSql,
-  database: environment.databaseSql,
-});
+export const dataSource = new DataSource({
+        type: 'mysql',
+        host: 'localhost',
+        port: 3306,
+        username: 'root',
+        password: 'root',
+        database: 'test',
+        entities: [
+            __dirname + '/../**/*.entity{.ts,.js}',
+        ],
+        synchronize: true,
+      });
 
-connection.connect(function (err: any) {
-  if (err) {
-    return console.error("error: " + err.message);
-  }
-
-  console.log("Connected to the MySQL server.");
-});
-module.exports = connection.promise();
-// connection.end()
+    
