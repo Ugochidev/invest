@@ -4,7 +4,7 @@ import { DataSource } from "typeorm";
 import environment from "../environment";
 
 // Create a new DataSource instance with the database connection details
-export const AppDataSource = new DataSource({
+const AppDataSource = new DataSource({
   type: "postgres",
   host: environment.hostPg,
   port: parseInt(environment.portPg),

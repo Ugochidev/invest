@@ -31,12 +31,15 @@ class User {
   @Column()
   last_name: string;
 
+  @Column()
+  age: number;
+
   @Column({ default: false })
   is_active: boolean;
 
   @Column({
     type: "enum",
-    enum: [ "USER", "ADMIN"],
+    enum: ["USER", "ADMIN"],
     default: "USER",
   })
   role: string;
