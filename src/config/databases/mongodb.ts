@@ -11,5 +11,4 @@ const connectDB = async () => {
     throw new Error("Database not Connected");
   }
 };
-
 export default connectDB;

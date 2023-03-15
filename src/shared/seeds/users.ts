@@ -26,6 +26,7 @@ const superAdmin: IUser = {
   role: "ADMIN",
   age : 41,
   is_active: true,
+
 };
 
 (async () => {
