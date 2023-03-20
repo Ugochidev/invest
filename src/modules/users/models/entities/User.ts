@@ -32,6 +32,9 @@ class User {
   last_name: string;
 
   @Column()
+  phone_number: string;
+
+  @Column()
   age: number;
 
   @Column({ default: false })

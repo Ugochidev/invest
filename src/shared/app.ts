@@ -3,7 +3,7 @@ import express from "express";
 import { Request, Response } from "express";
 import rateLimit from "express-rate-limit";
 import "reflect-metadata";
-// import routes from "./src/shared/routes";
+import routes from "../shared/routes";
 import cors from "cors";
 
 const app = express();
@@ -29,6 +29,6 @@ app.get("/", async (request: Request, response: Response) => {
 });
 
 // API routes
-// app.use("/api/v1", routes);
+app.use("/api/v1", routes);
 
 export default async () => app;
