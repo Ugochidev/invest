@@ -16,4 +16,8 @@ export default {
   userSql: process.env.userSql,
   passwordSql: process.env.passwordSql,
   databaseSql: process.env.databaseSql,
+  saltRounds : 10,
+   redisHost: process.env.REDIS_HOST || "127.0.0.1",
+  redisPort: process.env.REDIS_PORT || "6379",
+
 };
