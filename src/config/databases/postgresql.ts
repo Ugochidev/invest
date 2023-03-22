@@ -1,4 +1,4 @@
-import "reflect-metadata";
+// import "reflect-metadata";
 import { DataSource } from "typeorm";
 // import { User } from "../../modules/users/models/entities/User";
 import environment from "../environment";
@@ -14,8 +14,9 @@ const AppDataSource = new DataSource({
   synchronize: true,
   logging: false,
   entities: ["./src/modules/**/models/entities/*.ts"],
-  migrations: ["./src/shared/migrations/*.ts"],
+  migrations: [/*...*/],
   subscribers: ["invest"],
+  migrationsTableName: "migrations",
 });
 
 // Initialize the connection to the database

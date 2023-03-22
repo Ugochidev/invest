@@ -7,7 +7,7 @@ import routes from "../shared/routes";
 import cors from "cors";
 
 const app = express();
-
+require("../config/databases/postgresql");
 const limiter = rateLimit({
   windowMs: 1000, // 1 seconds
   max: 2, // Limit each IP to 2 requests per `window` (here, per 15 seconds)
