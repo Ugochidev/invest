@@ -12,7 +12,7 @@
     "build": "tsc -p .",
     "typeorm": "typeorm-ts-node-commonjs",
     "migration:generate": "ts-node ./node_modules/typeorm/cli.js migration:generate -d src/config/databases/postgresql.ts --name migrations ./src/migrations",
-    "migration:up": "ts-node ./node_modules/typeorm/cli.js migration:run -d src/config/databases/postgresql.ts",
+    "migration:up": "npx typeorm-ts-node-esm -d src/config/databases/postgresql.ts migration:run",
     "migration:down": "ts-node ./node_modules/typeorm/cli.js migration:revert -d src/config/databases/postgresql.ts",
     "seed": "ts-node ./src/shared/seeds/users.ts"
   },
