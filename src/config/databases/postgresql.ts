@@ -12,11 +12,9 @@ const AppDataSource = new DataSource({
   username: environment.userPg,
   password: environment.passwordPg,
   database: environment.databasePg,
-  synchronize: true,
-  logging: false,
   entities: ["./src/modules/**/models/entities/*.ts"],
   migrations: ["./src/shared/migrations/*.ts"],
-  applicationName: "Inventory API",
+  applicationName: "Invest",
 });
 
 // Initialize the connection to the database
