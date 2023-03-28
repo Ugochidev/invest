@@ -15,7 +15,7 @@ class VerifyPhoneNumberService {
   async execute({ phone_number }: IPhoneNumberDTO): Promise<{ otp: string }> {
     try {
       console.log(34215);
-      
+
       const user = await this.userRepository.findByPhoneNumber(phone_number);
       console.log(78654389, user);
 

@@ -11,7 +11,10 @@ class UserRepository {
     this.ormRepository = dataSource.getRepository(User);
   }
   async findByPhoneNumber(phone_number: string): Promise<User | undefined> {
+    console.log(8978, this.ormRepository);
     const user = await this.ormRepository.findOne({ where: { phone_number } });
+    console.log(user);
+    
     return user;
   }
 
