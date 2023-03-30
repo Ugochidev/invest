@@ -16,14 +16,18 @@ class VerifyPhoneNumberService {
     try {
       console.log(34215);
 
-      const user = await this.userRepository.findByPhoneNumber(phone_number);
-      console.log(78654389, user);
+      // const user = await this.userRepository.findByPhoneNumber(phone_number);
+      // console.log(78654389, user);
 
-      if (user) {
-        throw new AppError("Phone Number Exists!", 401);
-      }
+      // if (user) {
+      //   throw new AppError("Phone Number Exists!", 401);
+      // }
       const cacheExpiry = minutesToSeconds(10);
+      console.log(7676);
+
       const cachedData = await this.cache.get(phone_number);
+      console.log(323232, cachedData);
+
       if (cachedData) {
         cachedData.otp = generateOTP();
         this.cache.set(phone_number, cachedData.otp, cacheExpiry);
